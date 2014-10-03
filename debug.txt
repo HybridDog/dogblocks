@@ -1,0 +1,42 @@
+
+
+-------------
+  Separator  
+-------------
+
+Irrlicht log: Irrlicht Engine version 1.8.1
+Irrlicht log: Linux 3.13.0-36-generic #63-Ubuntu SMP Wed Sep 3 21:30:45 UTC 2014 i686
+Irrlicht log: Using renderer: OpenGL 4.4.0
+Irrlicht log: GeForce GT 610/PCIe/SSE2: NVIDIA Corporation
+Irrlicht log: OpenGL driver version is 1.2 or better.
+Irrlicht log: GLSL version: 4.4
+event handled by: maintab
+event handled by: maintab
+event handled by: maintab
+12:31:35: ACTION[main]: Client: Contacting remote server "http://media.digitalis.ga:2082/"
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Font size: 8 17
+12:32:44: ERROR[ConnectionSend]: con(16/243)RunTimeouts(): Peer 1 has timed out. (source=peer->timeout_counter)
+event handled by: maintab
+event handled by: maintab
+event handled by: maintab
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_off.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_off.png"
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_vertical_off.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_vertical_off.png"
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_on.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_on.png"
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_vertical_on.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_vertical_on.png"
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_bump_off.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_bump_off.png"
+12:33:02: ERROR[main]: generateImage(): Could not load image "wires_bump_on.png" while building texture
+12:33:02: ERROR[main]: generateImage(): Creating a dummy image for "wires_bump_on.png"
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Irrlicht log: Could not load texture: 
+Font size: 8 17
