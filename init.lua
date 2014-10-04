@@ -61,6 +61,7 @@ local dogs = {
 	},
 }
 
+local randm = 1
 for dog,data in pairs(dogs) do
 	local s = data.name or string.lower(string.sub(dog, 1, 1))
 	local name = "dogblocks:dog_"..s
@@ -88,6 +89,15 @@ for dog,data in pairs(dogs) do
 		tiles = {"dogblocks_dog_"..s..".png"},
 		light_source = 15,
 		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2},
+		on_punch = function(pos)
+			if math.random(randm) == math.random(2) then
+				--minetest.sound_play({name="dogblocks_"..s, pos=pos})
+				minetest.sound_play({name="dogblocks_whine", pos=pos})
+				randm = randm+1
+			else
+				randm = math.max(randm-1, 1)
+			end
+		end,
 	})
 	minetest.register_craft({
 		output = name.." 6",
