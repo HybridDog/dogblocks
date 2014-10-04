@@ -61,6 +61,12 @@ local dogs = {
 	},
 }
 
+local function bark(pos, s)
+	minetest.after(math.random(), function(s, pos)
+		minetest.sound_play({name="dogblocks_"..s, pos=pos})
+	end, s, pos)
+end
+
 local randm = 1
 for dog,data in pairs(dogs) do
 	local s = data.name or string.lower(string.sub(dog, 1, 1))
@@ -88,10 +94,9 @@ for dog,data in pairs(dogs) do
 		description = dog.." Block",
 		tiles = {"dogblocks_dog_"..s..".png"},
 		light_source = 15,
-		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2},
+		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2,dog=1},
 		on_punch = function(pos)
 			if math.random(randm) == math.random(2) then
-				--minetest.sound_play({name="dogblocks_"..s, pos=pos})
 				minetest.sound_play({name="dogblocks_whine", pos=pos})
 				randm = randm+1
 			else
@@ -102,5 +107,24 @@ for dog,data in pairs(dogs) do
 	minetest.register_craft({
 		output = name.." 6",
 		recipe = recipe
+	})
+	minetest.register_abm({
+		nodenames = {name},
+		interval = 1.5,
+		chance = 2,
+		action = function(pos)
+			if next(minetest.get_objects_inside_radius(pos, 1.5)) then
+				bark(pos, s)
+			end
+		end,
+	})
+	minetest.register_abm({
+		nodenames = {name},
+		neighbors = {"group:dog"},
+		interval = 1.5,
+		chance = 2,
+		action = function(pos)
+			bark(pos, s)
+		end,
 	})
 end
