@@ -1,5 +1,13 @@
 -- These is a mod that puts dog blocks. I give credit to, and not in a particular order, OldCoder, kaeza, babyface1013, jojoa1997
 
+local dog_sounds = {
+	footstep = {name="dogblocks_walk", gain=0.2},
+	dig = {name="dogblocks_dig", gain=0.5},
+	dug = {name="dogblocks_dug", gain=0.5},
+	place = {name="dogblocks_place", gain=0.5},
+}
+
+
 --Definatios, b=black bw=brown w=white y=yellow o=orange
 --This is for the fur blocks.
 
@@ -20,6 +28,7 @@ for s,l in pairs(colours) do
 		description = desc.." Fur Block",
 		tiles = {"dogblocks_fur_"..s..".png"},
 		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2},
+		sounds = dog_sounds,
 	})
 	minetest.register_craft({
 		output = name.." 6",
@@ -95,6 +104,7 @@ for dog,data in pairs(dogs) do
 		tiles = {"dogblocks_dog_"..s..".png"},
 		light_source = 15,
 		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2,dog=1},
+		sounds = dog_sounds,
 		on_punch = function(pos)
 			if math.random(randm) == math.random(2) then
 				minetest.sound_play({name="dogblocks_whine", pos=pos})
