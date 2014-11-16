@@ -5,3 +5,5 @@ pug http://freesound.org/people/bspiller5/sounds/180256/
 bichonfrise http://freesound.org/people/StephenSaldanha/sounds/121891/
 
 the other sounds are CC0
+
+doge texture from https://i.imgur.com/81qyN1y.jpg

@@ -44,21 +44,11 @@ end
 --This is for the actual Dog blocks.------------------------------------------------------------
 
 local dogs = {
-	["Pug"] = {"b"},
 	["Beagle"] = {"b", "bw", "bw", "w", "w"},
-	["German Shepherd"] = {"b", "b", "bw", "bw", "bw", name="gs"},
-	["Fox Terrier"] = {"w", "w", "bw", name="ft"},
 	["Bichon Frise"] = {"w", name="bf"},
-	["Labrador Retriever"] = {
-		name = "lb",
-		recipe = {
-			{"", "", "default:torch"},
-			{"dogblocks:fur_b", "dogblocks:fur_b", "wool:black"},
-			{"dogblocks:fur_b", "", "dogblocks:fur_b"},
-		}
-
-	},
-	["Rottweiler"] = {"b", "b", "b", "bw", "bw"},
+	["Doge"] = {"b", "o", "y", "y", "y", name="d"},
+	["Fox Terrier"] = {"w", "w", "bw", name="ft"},
+	["German Shepherd"] = {"b", "b", "bw", "bw", "bw", name="gs"},
 	["Labradoodle"] = {
 		name = "ld",
 		recipe = {
@@ -68,6 +58,17 @@ local dogs = {
 		}
 
 	},
+	["Labrador Retriever"] = {
+		name = "lb",
+		recipe = {
+			{"", "", "default:torch"},
+			{"dogblocks:fur_b", "dogblocks:fur_b", "wool:black"},
+			{"dogblocks:fur_b", "", "dogblocks:fur_b"},
+		}
+
+	},
+	["Pug"] = {"b"},
+	["Rottweiler"] = {"b", "b", "b", "bw", "bw"},
 }
 
 local function bark(pos, s)
