@@ -73,7 +73,7 @@ local dogs = {
 
 local function bark(pos, s)
 	minetest.after(math.random(), function(s, pos)
-		minetest.sound_play({name="dogblocks_"..s, pos=pos})
+		minetest.sound_play("dogblocks_"..s, {pos=pos})
 	end, s, pos)
 end
 
@@ -108,7 +108,7 @@ for dog,data in pairs(dogs) do
 		sounds = dog_sounds,
 		on_punch = function(pos)
 			if math.random(randm) == math.random(2) then
-				minetest.sound_play({name="dogblocks_whine", pos=pos})
+				minetest.sound_play("dogblocks_whine", {pos=pos})
 				randm = randm+1
 			else
 				randm = math.max(randm-1, 1)
