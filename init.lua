@@ -12,11 +12,11 @@ local dog_sounds = {
 --This is for the fur blocks.
 
 local colours = {
-	["b"] = "black",
-	["bw"] = "brown",
-	["w"] = "white",
-	["y"] = "yellow",
-	["o"] = "orange"
+	b = "black",
+	bw = "brown",
+	w = "white",
+	y = "yellow",
+	o = "orange"
 }
 
 for s,l in pairs(colours) do
