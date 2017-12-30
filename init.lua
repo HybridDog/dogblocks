@@ -103,7 +103,7 @@ for dog,data in pairs(dogs) do
 	minetest.register_node(name, {
 		description = dog.." Block",
 		tiles = {"dogblocks_dog_"..s..".png"},
-		light_source = 15,
+		light_source = 14,
 		groups = {oddly_breakable_by_hand=3,snappy=2,choppy=2,dog=1},
 		sounds = dog_sounds,
 		on_punch = function(pos)
