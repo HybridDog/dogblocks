@@ -1,4 +1,5 @@
--- These is a mod that puts dog blocks. I give credit to, and not in a particular order, OldCoder, kaeza, babyface1013, jojoa1997
+-- These is a mod that puts dog blocks. I give credit to, and not in a
+-- particular order, OldCoder, kaeza, babyface1013, jojoa1997
 
 local dog_sounds = {
 	footstep = {name="dogblocks_walk", gain=0.2},
@@ -41,7 +42,7 @@ for s,l in pairs(colours) do
 end
 
 
---This is for the actual Dog blocks.------------------------------------------------------------
+--This is for the actual Dog blocks.--------------------------------------------
 
 local dogs = {
 	["Beagle"] = {"b", "bw", "bw", "w", "w"},
@@ -72,9 +73,9 @@ local dogs = {
 }
 
 local function bark(pos, s)
-	minetest.after(math.random(), function(s, pos)
-		minetest.sound_play("dogblocks_"..s, {pos=pos})
-	end, s, pos)
+	minetest.after(math.random(), function()
+		minetest.sound_play("dogblocks_" .. s, {pos = pos})
+	end)
 end
 
 local randm = 1
